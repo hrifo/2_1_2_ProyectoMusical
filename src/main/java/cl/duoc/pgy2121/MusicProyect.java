@@ -18,9 +18,8 @@ public class MusicProyect {
         // TODO code application logic here
         System.out.println("Bienvenido a mi programa musical");
         
-        Musica cancion1 = new Musica("Wish you where here","Pink Floyd",5,40);
-        cancion1.setFavorita(Boolean.TRUE);
-        cancion1.setDescarga(Boolean.TRUE);
+        Musica cancion1 = new Musica("Wish you where here","Pink Floyd",true,true,5,40);
+
         
         //Reproduciendo cancion elegida
         cancion1.reproducir();
@@ -30,6 +29,9 @@ public class MusicProyect {
         
         //Imprimir detalles de cancion
         cancion1.detallar();
+        
+        
+        
     }
     
 }

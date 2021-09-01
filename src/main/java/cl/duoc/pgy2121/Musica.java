@@ -5,29 +5,23 @@
  */
 package cl.duoc.pgy2121;
 
-import java.sql.Time;
-
 /**
  *
  * @author Difo
  */
 public class Musica {
-    private String titulo,artista;
-    private Boolean favorita,descarga;
-    private Integer minutos,segundos;
 
-    public Musica(String titulo, String artista, Integer minutos, Integer segundos) {
+    private String titulo, artista;
+    private Boolean favorita, descarga;
+    private Integer minutos, segundos;
+
+    public Musica(String titulo, String artista, Boolean favorita, Boolean descarga, Integer minutos, Integer segundos) {
         this.titulo = titulo;
         this.artista = artista;
-        this.minutos = minutos;
-        this.segundos = segundos;
-    }
-
-
-
-    public Musica(Boolean favorita, Boolean descarga) {
         this.favorita = favorita;
         this.descarga = descarga;
+        this.minutos = minutos;
+        this.segundos = segundos;
     }
 
     public String getTitulo() {
@@ -44,6 +38,22 @@ public class Musica {
 
     public void setArtista(String artista) {
         this.artista = artista;
+    }
+
+    public Boolean getFavorita() {
+        return favorita;
+    }
+
+    public void setFavorita(Boolean favorita) {
+        this.favorita = favorita;
+    }
+
+    public Boolean getDescarga() {
+        return descarga;
+    }
+
+    public void setDescarga(Boolean descarga) {
+        this.descarga = descarga;
     }
 
     public Integer getMinutos() {
@@ -63,38 +73,31 @@ public class Musica {
     }
 
 
-    public Boolean getFavorita() {
-        return favorita;
-    }
-
-    public void setFavorita(Boolean favorita) {
-        this.favorita = favorita;
-    }
-
-    public Boolean getDescarga() {
-        return descarga;
-    }
-
-    public void setDescarga(Boolean descarga) {
-        this.descarga = descarga;
-    }
-    
-    
     //Métodos custom
-    public void adelantar(Integer segundos){
-        System.out.println("Adelantando musica "+ segundos + "segundos");
+    public void adelantar(Integer segundos) {
+        System.out.println("Adelantando musica " + segundos + " segundos");
     }
-    
-    public void reproducir(){
-        System.out.println("Reproduciendo cancion "+ titulo +" del artista " + artista);
+
+    public void reproducir() {
+        System.out.println("Reproduciendo cancion " + titulo + " del artista " + artista);
     }
-    
-    public void detallar(){
+
+    public void detallar() {
         System.out.println("Detalles de cancion elegida: ");
-        System.out.println("Título: "+titulo);
-        System.out.println("Artista: "+artista);
-        System.out.println("Duración: "+minutos+":"+segundos);
+        System.out.println("Título: " + titulo);
+        System.out.println("Artista: " + artista);
+        System.out.println("Duración: " + minutos + ":" + segundos);
+        if(descarga){
+            System.out.println("Descargada: Si");
+        }else{
+            System.out.println("Descargada: No");
+        }
+        
+        if(favorita){
+            System.out.println("Favorita: Si");
+        }else{
+            System.out.println("Favorita: No");
+        }
         
     }
 }
-

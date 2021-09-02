@@ -15,14 +15,19 @@ public class Musica {
     private Boolean favorita, descarga;
     private Integer minutos, segundos;
 
-    public Musica(String titulo, String artista, Boolean favorita, Boolean descarga, Integer minutos, Integer segundos) {
+    public Musica(String titulo, String artista, Integer minutos, Integer segundos) {
         this.titulo = titulo;
         this.artista = artista;
-        this.favorita = favorita;
-        this.descarga = descarga;
         this.minutos = minutos;
         this.segundos = segundos;
     }
+
+    public Musica(Boolean favorita, Boolean descarga) {
+        this.favorita = favorita;
+        this.descarga = descarga;
+    }
+    
+    
 
     public String getTitulo() {
         return titulo;
